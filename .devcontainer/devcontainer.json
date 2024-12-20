@@ -1,0 +1,19 @@
+{
+    "name": "PHP with MySQL",
+    "build": {
+        "dockerfile": "Dockerfile",
+        "args": {
+            "PHP_VERSION": "8.1"
+        }
+    },
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "DEVSENSE.phptools-vscode"
+            ]
+        }
+    },
+    "forwardPorts": [8000],
+    "postCreateCommand": "composer install",
+    "remoteUser": "vscode"
+}
